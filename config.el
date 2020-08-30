@@ -108,3 +108,6 @@
          (find-file-noselect filename)
     )
   )
+
+
+(package-install-file "~/Downloads/org-krita-0.1.1.tar")
