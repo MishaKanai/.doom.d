@@ -111,3 +111,14 @@
 
 
 (package-install-file "~/Downloads/org-krita-0.1.1.tar")
+
+(use-package org-journal
+  :bind
+  ("C-c n j" . org-journal-new-entry)
+  :custom
+  (org-journal-date-prefix "#+title: ")
+  (org-journal-file-format "%Y-%m-%d.org.gpg")
+  (org-journal-dir "~/Dropbox/org/personal/")
+  (org-journal-date-format "%A, %d %B %Y")
+  :config
+  (setq org-journal-encrypt-journal t))

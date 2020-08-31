@@ -50,3 +50,4 @@
 ;(unpin! t)
 
 (package! org-roam-server)
+(package! org-journal)
