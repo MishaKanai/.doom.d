@@ -110,7 +110,8 @@
   )
 
 
-(package-install-file "~/Downloads/org-krita-0.1.1.tar")
+;; (package-install-file "~/Downloads/org-krita-0.1.1.tar")
+
 
 (use-package org-journal
   :bind
@@ -122,3 +123,15 @@
   (org-journal-date-format "%A, %d %B %Y")
   :config
   (setq org-journal-encrypt-journal t))
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
+(use-package org-krita
+  :ensure t
+  :quelpa (org-krita :fetcher github :repo "lepisma/org-krita" :files ("*.el" "resources"))
+  :config
+  (add-hook 'org-mode-hook 'org-krita-mode))
