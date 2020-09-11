@@ -135,3 +135,5 @@
   :quelpa (org-krita :fetcher github :repo "lepisma/org-krita" :files ("*.el" "resources"))
   :config
   (add-hook 'org-mode-hook 'org-krita-mode))
+
+(add-hook 'org-mode-hook 'org-fragtog-mode)

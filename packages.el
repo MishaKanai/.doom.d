@@ -52,3 +52,4 @@
 (package! org-roam-server)
 (package! org-journal)
 (package! quelpa-use-package)
+(package! org-fragtog)
